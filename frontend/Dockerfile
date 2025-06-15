@@ -6,7 +6,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# creating the build time variable: --build-arg REACT_APP_BACKEND_URL=""
+# creating the build time variable: use --build-arg REACT_APP_BACKEND_URL="" 
+# during the docker build process
 ARG REACT_APP_BACKEND_URL=""
 ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 
